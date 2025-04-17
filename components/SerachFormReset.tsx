@@ -6,7 +6,7 @@ import { X } from "lucide-react";
 const SerachFormReset = () => {
   const reset = () => {
     const form = document.querySelector(".search-form") as HTMLFormElement;
-    
+    console.log(form)
     if (form) form.reset();
   };
   return (

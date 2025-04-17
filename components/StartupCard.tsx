@@ -27,7 +27,7 @@ export const StartupCard = ({ post }) => {
         </div>
         <Link href={`/user/${author?.id}`}>
           <Image
-            src={image!}
+            src={avatar!}
             alt={name!}
             width={48}
             height={48}
