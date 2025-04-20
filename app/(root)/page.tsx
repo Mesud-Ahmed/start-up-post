@@ -30,10 +30,14 @@ export default async function Home({
         <p className="text-30-semibold">
           {query ? `Search results for ${query}` : "All startups"}
         </p>
-        <ul>
-          {posts.map((post: StartupTypeCard) => (
-            <StartupCard key={post._id} post={post} />
-          ))}
+        <ul className="mt-7 grid grid-cols-1  md:grid cols-2">
+          {posts?.length > 0 ? (
+            posts.map((post: StartupTypeCard) => (
+              <StartupCard key={post?._id} post={post} />
+            ))
+          ) : (
+            <p className="no-results">No startups found</p>
+          )}
         </ul>
       </section>
       <SanityLive />
